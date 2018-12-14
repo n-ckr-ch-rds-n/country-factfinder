@@ -1,3 +1,5 @@
 <app-country *ngFor="let country of allCountries"
-  [country]="country">
+  [country]="country" (click)="updateWindow(country)">
 </app-country>
+<app-fact-window *ngIf="!loading" [selectedCountry]="selectedCountry"></app-fact-window>
+

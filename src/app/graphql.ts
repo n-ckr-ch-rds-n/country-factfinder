@@ -4,10 +4,17 @@ import {Country} from './types';
 export const ALL_COUNTRIES_QUERY = gql`
   query AllCountriesQuery {
     countries {
+    continent {
       name
-      emoji
+    }
+    name
+    emoji
+    currency
+    languages{
+      name
     }
   }
+ }
 `;
 
 export interface AllCountriesQueryResponse {

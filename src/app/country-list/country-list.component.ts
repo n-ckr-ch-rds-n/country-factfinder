@@ -3,10 +3,6 @@ import {Country} from '../types';
 import {Apollo} from 'apollo-angular';
 import {ALL_COUNTRIES_QUERY, AllCountriesQueryResponse} from '../graphql';
 
-interface Response {
-  countries: Country[];
-}
-
 @Component({
   selector: 'app-country-list',
   templateUrl: './country-list.component.html',
@@ -14,16 +10,23 @@ interface Response {
 })
 export class CountryListComponent implements OnInit {
   allCountries: Country[];
+  selectedCountry: Country;
   loading = true;
 
   constructor(private apollo: Apollo) { }
 
+  updateWindow(country: Country) {
+    this.selectedCountry = country;
+  }
+
   ngOnInit() {
-    this.apollo.watchQuery<Response>({
+    this.apollo.watchQuery<AllCountriesQueryResponse>({
       query: ALL_COUNTRIES_QUERY,
     }).valueChanges.subscribe((response) => {
-      console.log(response.data.countries);
       this.allCountries = response.data.countries;
+      this.selectedCountry = response.data.countries[0];
+      console.log(response.data);
+      this.loading = false;
     });
   }
 

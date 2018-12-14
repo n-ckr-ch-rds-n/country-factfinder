@@ -15,7 +15,4 @@ export class CountryComponent implements OnInit {
   ngOnInit() {
   }
 
-  voteForLink = async () => {
-
-  }
 }
