@@ -6,6 +6,9 @@ import {GraphQLModule} from './apollo.config';
 import { CountryComponent } from './country/country.component';
 import { CountryListComponent } from './country-list/country-list.component';
 import { FactWindowComponent } from './fact-window/fact-window.component';
+import {MatListModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { FactWindowComponent } from './fact-window/fact-window.component';
   ],
   imports: [
     BrowserModule,
-    GraphQLModule
+    GraphQLModule,
+    BrowserAnimationsModule,
+    MatListModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
