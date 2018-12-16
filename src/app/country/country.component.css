@@ -4,4 +4,5 @@
 
 .country:hover {
   background-color: darkgrey;
+  cursor: pointer;
 }
