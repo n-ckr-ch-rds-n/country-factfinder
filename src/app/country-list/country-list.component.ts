@@ -23,7 +23,7 @@ export class CountryListComponent implements OnInit {
     this.apollo.watchQuery<AllCountriesQueryResponse>({
       query: ALL_COUNTRIES_QUERY,
     }).valueChanges.subscribe((response) => {
-      this.allCountries = response.data.countries;
+      this.allCountries = response.data.countries.sort((a, b) => a.name > b.name ? 1 : -1);
       this.selectedCountry = response.data.countries[0];
       console.log(response.data);
       this.loading = false;
