@@ -9,6 +9,7 @@ import { FactWindowComponent } from './fact-window/fact-window.component';
 import {MatListModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     GraphQLModule,
     BrowserAnimationsModule,
     MatListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
