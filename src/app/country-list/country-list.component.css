@@ -1,9 +1,10 @@
 .container {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
-.factWindow {
-  position: fixed;
-  left: 500px;
+.paginatedList {
+  margin-top: 1em;
+  margin-left: 1em;
 }

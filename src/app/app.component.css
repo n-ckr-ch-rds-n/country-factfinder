@@ -1,0 +1,11 @@
+.body {
+  background-color: rgba(95, 158, 160, 0.37);
+}
+
+mat-toolbar {
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+}

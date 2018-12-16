@@ -6,7 +6,7 @@ import {GraphQLModule} from './apollo.config';
 import { CountryComponent } from './country/country.component';
 import { CountryListComponent } from './country-list/country-list.component';
 import { FactWindowComponent } from './fact-window/fact-window.component';
-import {MatCardModule, MatListModule} from '@angular/material';
+import {MatCardModule, MatListModule, MatToolbarModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {NgxPaginationModule} from 'ngx-pagination';
@@ -24,6 +24,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     BrowserAnimationsModule,
     MatListModule,
     MatCardModule,
+    MatToolbarModule,
     FlexLayoutModule,
     NgxPaginationModule
   ],

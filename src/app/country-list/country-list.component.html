@@ -1,11 +1,13 @@
 <div class="container">
-<mat-list class="countryList">
-  <app-country *ngFor="let country of allCountries | paginate: { itemsPerPage: 10, currentPage: p }"
-               [country]="country" (click)="updateWindow(country)">
-  </app-country>
-  <pagination-controls (pageChange)="p = $event"></pagination-controls>
-</mat-list>
+  <mat-card class="paginatedList">
+    <mat-list>
+      <app-country *ngFor="let country of allCountries | paginate: { itemsPerPage: 10, currentPage: p }"
+                   [country]="country" (click)="updateWindow(country)">
+      </app-country>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </mat-list>
+  </mat-card>
 
-<app-fact-window class="factWindow" *ngIf="!loading" [selectedCountry]="selectedCountry"></app-fact-window>
+  <app-fact-window class="factWindow" *ngIf="!loading" [selectedCountry]="selectedCountry"></app-fact-window>
 
 </div>

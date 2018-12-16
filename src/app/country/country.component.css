@@ -1,0 +1,7 @@
+.country {
+  border-bottom: darkgrey;
+}
+
+.country:hover {
+  background-color: darkgrey;
+}
