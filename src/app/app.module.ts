@@ -8,7 +8,6 @@ import { CountryListComponent } from './country-list/country-list.component';
 import { FactWindowComponent } from './fact-window/fact-window.component';
 import {MatCardModule, MatListModule, MatToolbarModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FlexLayoutModule} from '@angular/flex-layout';
 import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
@@ -25,7 +24,6 @@ import {NgxPaginationModule} from 'ngx-pagination';
     MatListModule,
     MatCardModule,
     MatToolbarModule,
-    FlexLayoutModule,
     NgxPaginationModule
   ],
   providers: [],
